@@ -1,0 +1,196 @@
+﻿/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #f4f4f4;
+    background-color: #181818;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styling */
+header {
+    background-color: #111;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff5656; /* Adds a slight Lovecraftian theme */
+}
+
+    header h1 {
+        font-size: 2.8rem;
+        letter-spacing: 3px;
+        color: #ff5656;
+        transition: transform 0.4s ease;
+    }
+
+        header h1:hover {
+            transform: rotate(-2deg); /* Eerie hover effect for the title */
+        }
+
+nav a {
+    color: #f4f4f4;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+    nav a:hover {
+        color: #ff5656;
+        transition: 0.3s ease;
+    }
+
+    nav a:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #ff5656;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover:before {
+        visibility: visible;
+        width: 100%; /* Underline effect */
+    }
+
+/* Hero Section */
+.hero {
+    background-image: url('your-image-path.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .hero h2 {
+        font-size: 4rem;
+        letter-spacing: 3px;
+        margin-bottom: 1.5rem;
+        color: #f4f4f4;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Subtle glow effect */
+    }
+
+    .hero p {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+        color: #cfcfcf;
+        max-width: 60%;
+        line-height: 1.6;
+    }
+
+    .hero a {
+        background-color: #ff5656;
+        color: #fff;
+        padding: 1rem 3rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: background-color 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 5px 15px rgba(255, 86, 86, 0.3);
+    }
+
+        .hero a:hover {
+            background-color: #e74c3c;
+            box-shadow: 0px 5px 25px rgba(255, 86, 86, 0.6); /* Adds a glowing effect when hovering */
+        }
+
+    /* Special Effects for Hero Section */
+    .hero::before {
+        content: '';
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(circle, rgba(0,0,0,0.9), transparent);
+        top: 0;
+        left: -50%;
+        animation: rotateGlow 20s infinite linear;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+@keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid #ff5656;
+}
+
+    footer p {
+        font-size: 1.1rem;
+        color: #888;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    }
+
+/* Additional Sections (e.g. About, Lore) */
+section {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+}
+
+    section h3 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #ff5656;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    section p {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        color: #d3d3d3;
+        text-align: center;
+    }
+
+/* Special Hover Effects for Elements */
+a:hover {
+    text-shadow: 0px 0px 8px rgba(255, 86, 86, 0.8);
+}
+
+/* Scrollbar Customization (if needed) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff5656;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}

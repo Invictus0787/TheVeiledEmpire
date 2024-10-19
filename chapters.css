@@ -1,0 +1,238 @@
+﻿/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #f4f4f4;
+    background-color: #181818;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styling */
+header {
+    background-color: #111;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff5656; /* Adds the red underline */
+}
+
+header h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5rem; /* Correct font size */
+    letter-spacing: 2px;
+    margin: 0;
+    color: #ff5656;
+    transition: transform 0.4s ease, text-shadow 0.4s ease; /* Tilt and glow transition */
+}
+
+header h1:hover {
+    transform: rotate(-2deg); /* Tilt effect */
+    text-shadow: 0px 0px 8px rgba(255, 86, 86, 0.8); /* Glow effect */
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.2rem; /* Keeping the same size as before */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Adding hover effects */
+}
+
+nav a:hover {
+    color: #ff5656;
+    text-shadow: 0px 0px 5px rgba(255, 86, 86, 0.8); /* Glow effect on links */
+}
+
+
+nav a:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff5656;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover:before {
+    visibility: visible;
+    width: 100%; /* Underline effect */
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff5656;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+
+/* Act Section Styling */
+.act-section {
+    background-color: #202020;
+    padding: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: #ff5656;
+    border-left: 5px solid #ff5656;
+    border-right: 5px solid #ff5656;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+.act-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.act-section h2 {
+    font-size: 3.5rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 1.5rem;
+    color: #ff5656;
+}
+
+.act-section p {
+    font-size: 1.5rem;
+    color: #d3d3d3;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* POV Sidebar Styling */
+.pov-sidebar {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ff5656;
+    max-width: 250px;
+    margin: 2rem auto; /* Centering the sidebar with a bit more margin */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pov-sidebar:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+    box-shadow: 0 0 20px rgba(255, 86, 86, 0.8); /* More pronounced shadow on hover */
+}
+
+.pov-sidebar h3 {
+    font-size: 1.8rem; /* Slightly bigger heading */
+    color: #ff5656;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the POV heading */
+}
+
+.pov-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pov-sidebar ul li {
+    font-size: 1.3rem;
+    color: #f4f4f4;
+    padding: 8px 0;
+    text-align: left; /* Keeping the list aligned to the left for clarity */
+    border-bottom: 1px solid #ff5656; /* Adding a slight divider for better readability */
+}
+
+.pov-sidebar ul li:last-child {
+    border-bottom: none; /* No border for the last list item */
+}
+
+/* Chapters Section Styling */
+.chapters-section {
+    background-color: #1a1a1a;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.chapters-section h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3rem;
+    color: #ff5656;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2rem;
+}
+
+/* Chapter Card Styling */
+.chapter {
+    margin-bottom: 4rem;
+    text-align: left;
+    padding: 2rem;
+    background-color: #202020;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Chapter Hover Effect */
+.chapter:hover {
+    transform: scale(1.03); /* Slightly enlarges the chapter card */
+    box-shadow: 0 0 20px rgba(255, 86, 86, 0.6); /* Red glow effect */
+}
+
+.chapter h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #ff5656;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.chapter p {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+/* POV Indicators */
+.chapter-pov {
+    background-color: #ff5656;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* POV Indicator Hover Effect */
+.chapter:hover .chapter-pov {
+    background-color: #e74c3c;
+    box-shadow: 0 0 15px rgba(255, 86, 86, 0.6); /* Glow effect on the POV tag */
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #111;
+    color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
